@@ -1,0 +1,31 @@
+name: bluemesh_native
+description: Offline P2P Bluetooth Low Energy (BLE) Mesh Messenger for Android and iOS.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Central Role: Scanning, connecting, MTU negotiation, GATT writes
+  flutter_blue_plus: ^1.32.12
+  # Peripheral Role: Advertising & hosting local GATT server
+  ble_peripheral: ^2.2.0
+  # Runtime OS permission handling
+  permission_handler: ^11.3.1
+  # Offline local NoSQL persistence for messages and peer profiles
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  # Unique message IDs & timestamp formatting
+  uuid: ^4.4.0
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.2
+
+flutter:
+  uses-material-design: true
